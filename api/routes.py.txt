@@ -1,0 +1,25 @@
+from fastapi import APIRouter
+from api.schemas import GenerateRequest
+
+router = APIRouter()
+
+@router.get("/health")
+def health():
+    return {
+        "status":"ok"
+    }
+
+@router.post("/generate")
+def generate(data: GenerateRequest):
+
+    return {
+
+        "status":"queued",
+
+        "prompt":data.prompt,
+
+        "lyrics":data.lyrics,
+
+        "duration":data.duration
+
+    }

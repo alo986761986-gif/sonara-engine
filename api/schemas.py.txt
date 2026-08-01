@@ -1,0 +1,11 @@
+from pydantic import BaseModel
+
+class GenerateRequest(BaseModel):
+
+    prompt: str
+
+    lyrics: str = ""
+
+    duration: int = 180
+
+    seed: int = 42

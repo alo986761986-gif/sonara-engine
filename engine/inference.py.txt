@@ -1,0 +1,13 @@
+from engine.model_loader import load
+
+def generate_song(prompt,lyrics,duration):
+
+    load()
+
+    print("Generating...")
+
+    return {
+
+        "audio":"/workspace/outputs/song.wav"
+
+    }
